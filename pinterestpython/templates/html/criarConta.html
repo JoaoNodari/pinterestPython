@@ -1,0 +1,23 @@
+{% extends "html/homepage.html"%}
+
+{% block titulo %} Criar Conta - PINTEREST {% endblock %}
+
+{% block formulario %}
+        <form method="POST">
+                {{ form.csrf_token }}
+
+                {{ form.email.label() }}
+                {{ form.email() }}
+
+                {{ form.username.label() }}
+                {{ form.username() }}
+
+                {{ form.senha.label() }}
+                {{ form.senha() }}
+
+                {{ form.confirmacaoSenha.label() }}
+                {{ form.confirmacaoSenha() }}
+
+                {{ form.botaoConfirmacao() }}
+        </form>
+{% endblock %}

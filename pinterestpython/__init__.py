@@ -5,7 +5,7 @@ from flask_bcrypt import Bcrypt
 
 app = Flask(__name__) # Criando o aplicativo com o nome do arquivo
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db"
-app.config["SECRE_KEY"] = "chaveseguragrande"
+app.config["SECRET_KEY"] = "chaveseguragrande"
 
 database = SQLAlchemy(app) # Criando o banco de dados
 bcrypt = Bcrypt(app)

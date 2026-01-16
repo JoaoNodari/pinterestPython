@@ -5,7 +5,7 @@ from flask_login import UserMixin
 
 @login_manager.user_loader
 def load_usuario(id_usuario): # FUNÇÃO OBRIGATORIA PARA ESTRUTURA DO LOGIN
-    return Usuario.query.get(int(id.usuario)) # Para buscar informação no banco
+    return Usuario.query.get(int(id_usuario)) # Para buscar informação no banco
 
 class Usuario(database.Model, UserMixin):
     id = database.Column(database.Integer, primary_key=True)

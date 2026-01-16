@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,6 +9,20 @@
 {% block body %}
 <body>
     <h1>Pintest - Meu Primeiro site no ar</h1>
+
+    {% block formulario%}
+    <form method="POST">
+        {{ form.csrf_token }}
+
+        {{ form.email.label() }}
+        {{ form.email() }}
+
+        {{ form.senha.label() }}
+        {{ form.senha() }}
+
+        {{ form.botaoConfirmacao() }}
+    </form>
+    {% endblock %}
 </body>
 {% endblock %}
 </html>
