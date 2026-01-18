@@ -10,22 +10,11 @@ Perfil - {{ usuario }}
 {% block body %}
 
 <body>
-    <h1>Perfil do usuário - {{usuario}}</h1>
-    <a href="/templates/html/homepage.html"></a>
-</body>
+    <h1>Perfil do usuário - {{usuario.username }}</h1>
+    <a href="{{ url_for('logout') }}">Sair</a>
 
+    {% for foto in usuario.fotos %}
+    <img src="">
+    {% endfor %}
+</body>
 {% endblock %}
-
-<!-- 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Pinterest</title>
-</head>
-<body>
-    <h1>Perfil do usuário: {{usuario}}</h1>
-    <a href="{{url_for('homepage')}}">Sair</a>
-</body>
-</html> -->
